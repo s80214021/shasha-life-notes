@@ -124,7 +124,7 @@ header {
   gap: 56px;
   align-items: center;
 }
-.about .photo { aspect-ratio: 1; background: var(--warm-white); }
+.about .photo { aspect-ratio: 4 / 5; background: var(--warm-white); }
 .about p + p { margin-top: 16px; }
 
 /* ── 我陪伴的人 ── */
