@@ -77,7 +77,8 @@
       padding: 16px;
       overflow: hidden;
     }
-    .photo img { width: 100%; height: 100%; object-fit: cover; }
+    .photo:has(img) { padding: 0; }
+    .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
     /* ── 導覽列 ── */
     header {
@@ -238,6 +239,7 @@
       .wrap { padding: 0 16px; }
       .nav ul { display: none; }
       .hero { padding: 40px 0 72px; }
+      .hero h1 { font-size: min(32px, 8.4vw); }
       .hero .wrap, .about .wrap { grid-template-columns: 1fr; gap: 36px; }
       .hero .photo { aspect-ratio: 4 / 3; order: -1; }
       .about .photo { max-width: 280px; }
@@ -275,8 +277,7 @@
           <a class="btn btn-line" href="#notes">先看看筆記</a>
         </div>
         <div class="photo">
-          <!-- 換成夏夏本人的生活隨拍，例如：跑完步、咖啡廳、旅行中 -->
-          夏夏本人生活照<br>（自然光、手機隨拍）
+          <img src="images/hero.jpg" alt="夏夏在夕陽下的運動場邊微笑自拍" style="object-position: center 40%;">
         </div>
       </div>
     </section>
@@ -285,8 +286,7 @@
     <section class="about" id="about">
       <div class="wrap">
         <div class="photo">
-          <!-- 換成各平台共用的固定頭像照 -->
-          固定頭像照
+          <img src="images/about.jpg" alt="夏夏戴著帽子、笑著自拍" style="object-position: 58% center;">
         </div>
         <div>
           <span class="eyebrow">關於夏夏</span>
@@ -354,7 +354,7 @@
         </div>
         <div class="notes-grid">
           <a class="note" href="#">
-            <div class="photo">跑步隨拍</div>
+            <div class="photo"><img src="images/note-sport.jpg" alt="夏夏和車友騎車時的自拍" loading="lazy" style="object-position: center 65%;"></div>
             <div class="note-body">
               <span class="tag">運動 × 醫療</span>
               <h3>跑完半馬後，我重新看了一次自己的醫療保障</h3>
@@ -362,7 +362,7 @@
             </div>
           </a>
           <a class="note" href="#">
-            <div class="photo">旅行隨拍</div>
+            <div class="photo"><img src="images/note-travel.jpg" alt="夏夏牽著單車站在海豚拱門下" loading="lazy" style="object-position: center 70%;"></div>
             <div class="note-body">
               <span class="tag">旅行</span>
               <h3>出國旅行前，我會先確認的三件小事</h3>
@@ -370,7 +370,7 @@
             </div>
           </a>
           <a class="note" href="#">
-            <div class="photo">咖啡廳隨拍</div>
+            <div class="photo"><img src="images/note-cafe.jpg" alt="咖啡廳桌上的鬆餅和一杯奶茶，窗邊放著單車安全帽" loading="lazy" style="object-position: center 60%;"></div>
             <div class="note-body">
               <span class="tag">退休日常</span>
               <h3>想像一下，<span class="num">60</span> 歲的你在哪間咖啡廳？</h3>
